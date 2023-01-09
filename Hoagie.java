@@ -23,7 +23,7 @@ public class Hoagie {
 	 public String getSize() {
 	    	return size;
 	    }
-	 public String geBread() {
+	 public String getBread() {
 	    	return bread;
 	    }
 	 public String getMeat() {
