@@ -2,20 +2,24 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import java.awt.Color;
 import java.awt.SystemColor;
 import javax.swing.JLabel;
 import java.awt.Font;
+
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.UIManager;
+import javax.swing.JTextArea;
 
 public class CondimentGui extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField jt;
 
 	/**
 	 * Launch the application.
@@ -40,18 +44,11 @@ public class CondimentGui extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(UIManager.getColor("CheckBox.background"));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		jt = new JTextField();
-		jt.setBounds(300, 45, 125, 200);
-		jt.setForeground(SystemColor.desktop);
-		jt.setBackground(new Color(255, 255, 255));
-		jt.setEnabled(false);
-		jt.setEditable(false);
-		contentPane.add(jt);
 		
 		JLabel lblNewLabel = new JLabel("My Order");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -102,5 +99,12 @@ public class CondimentGui extends JFrame {
 		JLabel lblNewLabel_2 = new JLabel("PlaceHolder for Logo");
 		lblNewLabel_2.setBounds(90, 11, 105, 39);
 		contentPane.add(lblNewLabel_2);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(300, 45, 125, 200);
+		contentPane.add(textArea);
+		Border border = BorderFactory.createLineBorder(Color.BLACK);
+	    textArea.setBorder(BorderFactory.createCompoundBorder(border,
+	            BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 	}
 }
