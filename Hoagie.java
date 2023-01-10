@@ -44,7 +44,25 @@ public class Hoagie {
 	    }
 	 
 	 //Setters
-	 public void setSize() {
+	public void setSize() {
+		 
+	 }
+	public void setBread() {
+		 
+	 }
+	public void setMeat() {
+		 
+	 }
+	public void setCheese() {
+		 
+	 }
+	public void setCondiments() {
+		 
+	 }
+	public void setVegatables() {
+		 
+	 }
+	public void setSeasoning() {
 		 
 	 }
 	 
