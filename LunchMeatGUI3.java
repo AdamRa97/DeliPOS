@@ -109,3 +109,4 @@ public class LunchMeatGUI3 extends JFrame {
 	            BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
 }
+}
